@@ -1,0 +1,25 @@
+{
+    "name": "ESP32 ESP-IDF Development Environment",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            },
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.makefile-tools",
+                "espressif.esp-idf-extension"
+            ]
+        }
+    },
+    "remoteUser": "developer",
+    // ลบบรรทัด postCreateCommand นี้ออกไป:
+    "workspaceFolder": "/home/developer/workspace",
+    "mounts": [
+        "source=/dev,target=/dev,type=bind"
+    ]
+}
